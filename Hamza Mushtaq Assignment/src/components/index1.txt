@@ -1,0 +1,69 @@
+import React from 'react'
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import '../style/home.css'
+import { AiOutlineTrademarkCircle } from 'react-icons/ai';
+import { TbWorld } from 'react-icons/tb';
+
+
+export default function Index() {
+    return (
+        <>
+            <div className='main'>
+                {/* cont1 start */}
+                <div className='cont1'>
+                    {/* c1d1 start */}
+                    <div className='c1d1'>
+                        {/* c1logo start */}
+                        <div className='c1logo'>
+                            <div className='icon'>
+                                <AiOutlineTrademarkCircle style={{ fontSize: "30px" }} />
+                            </div>
+                            <div>
+                                <h3>LEGO LAND</h3>
+                                <p>RED BRICK</p>
+                            </div>
+                        </div>
+                        {/* c1logo end */}
+                    </div>
+                    {/* c1d1 end */}
+                    <div className='c1d2'>
+                        <div className="nav2">
+
+                            <nav>
+                                <ul>
+                                    <li className="li2 liWidth">
+                                        <Link className="a2" to="/">Home</Link>
+                                    </li>
+                                    <li className="li2 liWidth">
+                                        <Link className="a2" to="/toys">Toy</Link>
+                                    </li>
+                                    <li className="li2 liWidth">
+                                        <Link className="a2" to="/catalogs">Catalogs</Link>
+                                    </li>
+                                    <li className="li2 liWidth">
+                                        <Link className="a2" to="/characters">Characters</Link>
+                                    </li>
+                                    <li className="li2 liWidth">
+                                        <Link className="a2" to="/brands">Brands</Link>
+                                    </li>
+                                    <li className="li3 liWidth">
+                                        <div className='eng'>
+                                            <TbWorld className='tW' />
+                                            <p>ENG</p>
+                                        </div>
+                                    </li>
+                                    <li className="li3 liWidth">
+                                        Alexender
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <Outlet />
+                    </div>
+                </div>
+                {/* cont1 end */}
+            </div>
+        </>
+    )
+}
